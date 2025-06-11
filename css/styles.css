@@ -1,0 +1,111 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8; /* Light background for the page */
+}
+
+/* Navbar Styles */
+#header-nav {
+    background-color: #a0a0a0; /* Gray background for the navbar */
+    border-radius: 0; /* Remove rounded corners */
+    border: 0; /* Remove borders */
+}
+
+.navbar-brand {
+    font-size: 2em; /* Larger font size for the brand name */
+    color: #333 !important; /* Darker text color */
+    padding-top: 15px; /* Adjust padding for alignment */
+    line-height: 1; /* Ensure proper line height */
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #000 !important; /* Darker color on hover/focus */
+}
+
+/* Hide desktop/tablet menu items and show mobile toggle button */
+.navbar-toggle {
+    border: 1px solid #666; /* Border for the toggle button */
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #333; /* Color of the hamburger icon bars */
+}
+
+/* Mobile specific navigation */
+#collapsable-nav {
+    background-color: #d3d3d3; /* Light gray background for dropdown menu */
+    border-top: 1px solid #666; /* Separator line */
+}
+
+#collapsable-nav a {
+    color: #333; /* Text color for menu items */
+    font-size: 1.2em; /* Font size for menu items */
+    text-align: center; /* Center the text within the dropdown */
+    padding: 10px 15px; /* Padding for menu items */
+}
+
+#collapsable-nav a:hover {
+    background-color: #c0c0c0; /* Slightly darker background on hover */
+}
+
+/* Main Content Styles */
+#main-content {
+    margin-top: 20px; /* Space below the navbar */
+    margin-bottom: 20px; /* Space above the bottom */
+}
+
+.section {
+    background-color: #cccccc; /* Gray background for sections */
+    border: 1px solid #999999; /* Darker border */
+    margin-bottom: 20px; /* Space between sections */
+    padding: 20px; /* Internal padding */
+    height: 1000px; /* Make the section tall to enforce scrolling */
+    overflow: auto; /* Enable scrolling if content exceeds height */
+}
+
+.section h3 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Darker text color for heading */
+    font-weight: bold;
+}
+
+.section p {
+    color: #555; /* Slightly lighter text color for paragraphs */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Bootstrap overrides for centering text */
+.text-center {
+    text-align: center;
+}
+
+/* Back to Top link styling */
+.section .text-right a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.section .text-right a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries for Bootstrap breakpoints */
+/* Extra small devices (phones, less than 768px) */
+/* Already handled by col-xs-12 and visible-xs */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Hide the mobile navigation toggle and dropdown */
+    .navbar-header button {
+        display: none;
+    }
+    #collapsable-nav {
+        display: none !important; /* Important to override Bootstrap's default display */
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* No specific changes needed here as md-based classes are inherited or directly applied */
+}
